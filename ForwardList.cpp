@@ -11,12 +11,12 @@ ForwardList *CreateNode(int value){
 
 	ForwardList *wsk=new ForwardList;
 	(*wsk).value=value;	//wsk->value=value
-	wsk->next=NULL;
+	wsk->next=nullptr;
 	return wsk;
 }
 
 void DestroyList(ForwardList *list){	
-	while(list!=NULL){
+	while(list!=nullptr){
 		ForwardList *next2=list->next;
 		delete list;
 		list=next2;
@@ -37,7 +37,7 @@ ForwardList *PushFront(ForwardList *list, int value){
 
 
 void Append(ForwardList *list, ForwardList *tail){
-	while(list->next!=NULL){
+	while(list->next!=nullptr){
 		list=list->next;
 	}
 	
@@ -54,7 +54,7 @@ int main(){
 
 
 	
-	ForwardList *list=NULL;
+	ForwardList *list=nullptr;
 	
 	list=CreateNode(0);
 	for(int i=1; i<20; i++){
@@ -63,7 +63,7 @@ int main(){
 	}
 	
 	
-	for(ForwardList *p=list; p!=NULL; p=p->next){
+	for(ForwardList *p=list; p!=nullptr; p=p->next){
 		cout<<p->value<<endl;
 	}	
 
